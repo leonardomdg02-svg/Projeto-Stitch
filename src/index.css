@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", sans-serif;
+  
+  --color-surface-container-low: #141b2e;
+  --color-surface-container-high: #23293d;
+  --color-surface-container-highest: #2d3448;
+  --color-on-surface-variant: #c3c6d7;
+  --color-outline-variant: #434655;
+}
+
+@layer base {
+  body {
+    @apply bg-[#060d20] text-[#dbe2fc] font-sans;
+    background-image: radial-gradient(circle at 50% -20%, #1d4ed830 0%, #060d20 70%);
+    min-height: 100vh;
+  }
+}
+
+.glass-panel {
+  @apply bg-[#0f1525]/80 backdrop-blur-xl border border-[#1e2a45];
+}
+
+.glow-shadow {
+  box-shadow: 0 0 60px #1d4ed840;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
